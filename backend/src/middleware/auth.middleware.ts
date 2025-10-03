@@ -34,3 +34,12 @@ export const protectRoute = async (req: AuthRequest, res: Response, next: NextFu
         res.status(401).json({ message: `Unauthorized: ${error.message}` });
     }
 }
+
+
+
+export const adminMiddleware = (req: AuthRequest, res: Response, next: NextFunction) => {
+    if (req.user?.role !== "admin") {
+        return res.status(403).json({ message: "Access denied. Admins only." });
+    }
+    next();
+};

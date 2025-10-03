@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import { connectDB } from "./utils/db";
 import authRoutes from "./routes/authRoutes";
+import beerRoutes from "./routes/beerRoutes";
+import manufacturerRoutes from "./routes/manufacturerRoute";
 
 dotenv.config();
 
@@ -25,6 +27,8 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/beers", beerRoutes);
+app.use("/api/manufacturers", manufacturerRoutes );
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
