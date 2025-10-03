@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&family=Clash+Display:wght@200..700&family=Poppins:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&family=Clash+Display:wght@200..700&family=Poppins:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -45,12 +45,12 @@
   --color-surface-950: #030712;
 
   /* Font families - Add these */
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-inter: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-space: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
-  --font-clash: 'Clash Display', ui-sans-serif, system-ui, sans-serif;
-  --font-poppins: 'Poppins', ui-sans-serif, system-ui, sans-serif;
-  --font-outfit: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-space: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-clash: "Clash Display", ui-sans-serif, system-ui, sans-serif;
+  --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-outfit: "Outfit", ui-sans-serif, system-ui, sans-serif;
 }
 
 @theme inline {
@@ -167,8 +167,8 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-inter);
-    font-feature-settings: 'cv11', 'ss01';
-    font-variation-settings: 'opsz' 32;
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" 32;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -182,13 +182,12 @@
   .font-space {
     font-family: var(--font-space);
   }
-  .font-clash {
-    font-family: var(--font-clash);
+  .card-hover {
+    transition: all 0.2s ease;
   }
-  .font-poppins {
-    font-family: var(--font-poppins);
-  }
-  .font-outfit {
-    font-family: var(--font-outfit);
+
+  .card-hover:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 }
